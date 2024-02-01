@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, inject, Input, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MainService } from '../main.service';
 
@@ -16,11 +16,12 @@ import { MainService } from '../main.service';
       </div>
     </div>`,
   styles: `
-    :host { display: block; border: 1px red solid; padding: 10px 5px; margin-bottom: 15px; }
-    .dynamic-component { display: flex; justify-content: space-between; }
+    :host { display: block; padding: 10px 15px; margin-bottom: 15px; cursor: pointer;}
+    .dynamic-component { display: flex; justify-content: space-between; align-items: center; }
   `,
 })
 export class DynamicComponent {
+  @HostBinding('class.draw') selected = true;
   ms = inject(MainService);
   @Input() index = 0;
   @HostListener('click')

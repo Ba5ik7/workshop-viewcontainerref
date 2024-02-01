@@ -13,20 +13,42 @@ a {
 }
 
 body {
-  color: #fff;
-  background: #000;
+  color: #4f4034;
+  // box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  // height: 100svh;
+  // filter: url(#wavy2);
 }
 
 .logo {
-  width: 290px;
-  height: 91px;
-  background: url('https://angular.dev/assets/content/images/press-kit/angular_wordmark_gradient.png');
+  height: 100px;
+  margin: 20px;
+  background: url('/assets/angular_renaissance.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
-:root {
-  --md-sys-color-primary: olive;
-  --md-sys-color-secondary: tomato;
-  --md-ref-typeface-brand: 'Open Sans';
-  --md-ref-typeface-plain: system-ui;
+.logo::before {
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 700;
+  top: 25px;
+  left: 110px;
+  content: 'Angular';
+}
+
+.draw {
+  background:transparent;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  border:solid 1px #41403E;
+}
+
+.draw:hover{
+   box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+}
+button.lined.thick{
+   border:solid 3px #41403E;
 }
