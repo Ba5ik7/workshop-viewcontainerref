@@ -8,10 +8,6 @@
     'Noto Color Emoji';
 }
 
-a {
-  color: color(srgb 0.607979 0.71007 0.99968);
-}
-
 body {
   color: #4f4034;
   // box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
@@ -21,7 +17,7 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 75px;
   margin: 20px;
   background: url('/assets/angular_renaissance.png');
   background-size: contain;
@@ -30,11 +26,12 @@ body {
 
 .logo::before {
   position: relative;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  top: 25px;
-  left: 110px;
-  content: 'Angular';
+  top: 0px;
+  left: 84px;
+  letter-spacing: -0.3rem;
+  content: "Angular";
 }
 
 .draw {
@@ -48,7 +45,4 @@ body {
 
 .draw:hover{
    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
-}
-button.lined.thick{
-   border:solid 3px #41403E;
 }
